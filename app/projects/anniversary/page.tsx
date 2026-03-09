@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from '../detail.module.css';
 
+const withBasePath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
+
 export default function AnniversaryProjectPage() {
   return (
     <main className={styles.page}>
@@ -60,34 +62,34 @@ export default function AnniversaryProjectPage() {
           <h2>活动执行图集</h2>
           <div className={styles.galleryWide}>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/1.png" alt="周年庆抽奖转盘设计图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/1.png')} alt="周年庆抽奖转盘设计图" loading="lazy" />
               <figcaption className={styles.caption}>周年庆抽奖转盘视觉设计稿</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/2.jpg" alt="周年庆抽奖转盘实景图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/2.jpg')} alt="周年庆抽奖转盘实景图" loading="lazy" />
               <figcaption className={styles.caption}>周年庆抽奖转盘现场落地图</figcaption>
             </figure>
           </div>
 
           <div className={styles.gallery}>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/3.jpg" alt="周年庆海报图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/3.jpg')} alt="周年庆海报图" loading="lazy" />
               <figcaption className={styles.caption}>周年庆活动主视觉</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/4.jpg" alt="周年庆现场布置图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/4.jpg')} alt="周年庆现场布置图" loading="lazy" />
               <figcaption className={styles.caption}>活动现场搭建与布置</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/5-color.jpg" alt="物资筹备图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/5-color.jpg')} alt="物资筹备图" loading="lazy" />
               <figcaption className={styles.caption}>活动物资分拣与筹备</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/6-color.jpg" alt="周年庆蛋糕图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/6-color.jpg')} alt="周年庆蛋糕图" loading="lazy" />
               <figcaption className={styles.caption}>周年庆典蛋糕与礼仪布置</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p2/7-color.jpg" alt="茶歇准备图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/7-color.jpg')} alt="茶歇准备图" loading="lazy" />
               <figcaption className={styles.caption}>茶歇区摆台与体验优化</figcaption>
             </figure>
           </div>

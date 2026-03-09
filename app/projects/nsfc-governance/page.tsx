@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from '../detail.module.css';
 
+const withBasePath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
+
 export default function NsfcGovernanceProjectPage() {
   return (
     <main className={styles.page}>
@@ -100,27 +102,27 @@ export default function NsfcGovernanceProjectPage() {
           <h2>研究成果与参会图集</h2>
           <div className={styles.gallery}>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/11.jpg" alt="研究论文成果图1" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/11.jpg')} alt="研究论文成果图1" loading="lazy" />
               <figcaption className={styles.caption}>论文成果展示：《社会工作与管理》</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/12.jpg" alt="研究成果图2" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/12.jpg')} alt="研究成果图2" loading="lazy" />
               <figcaption className={styles.caption}>理论文章刊载版面</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/13.jpg" alt="研究成果图3" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/13.jpg')} alt="研究成果图3" loading="lazy" />
               <figcaption className={styles.caption}>新质生产力主题研究文章</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/14.jpg" alt="学术会议参会图1" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/14.jpg')} alt="学术会议参会图1" loading="lazy" />
               <figcaption className={styles.caption}>学术会议研讨与交流现场</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/15.jpg" alt="学术会议参会图2" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/15.jpg')} alt="学术会议参会图2" loading="lazy" />
               <figcaption className={styles.caption}>会议报告与主题发言场景</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src="/images/projects/p3/16.jpg" alt="学术会议参会图3" loading="lazy" />
+              <img src={withBasePath('/images/projects/p3/16.jpg')} alt="学术会议参会图3" loading="lazy" />
               <figcaption className={styles.caption}>政策论坛参会记录</figcaption>
             </figure>
           </div>

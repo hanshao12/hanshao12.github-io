@@ -221,6 +221,7 @@ const contacts = [
 ];
 
 export default function Home() {
+  const withBasePath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
   const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState('projects');
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -372,7 +373,7 @@ export default function Home() {
             {projectCards.map((project) => (
               <article key={project.title} className="card project-card">
                 <div className="project-cover">
-                  <img src={project.cover} alt={project.coverAlt} loading="lazy" />
+                  <img src={withBasePath(project.cover)} alt={project.coverAlt} loading="lazy" />
                 </div>
                 <div className="project-body">
                   <h3>{project.title}</h3>
@@ -402,7 +403,7 @@ export default function Home() {
               <article key={`${item.company}-${item.period}`} className="card internship-card">
                 <div className="internship-head">
                   <div className="company-logo-wrap">
-                    <img src={item.logo} alt={item.logoAlt} loading="lazy" />
+                    <img src={withBasePath(item.logo)} alt={item.logoAlt} loading="lazy" />
                   </div>
                   <div className="internship-head-content">
                     <p className="meta">{item.period}</p>
@@ -438,7 +439,7 @@ export default function Home() {
                 <div className="card education-card">
                   <div className="education-head">
                     <div className="education-logo-wrap">
-                      <img src={item.logo} alt={item.logoAlt} loading="lazy" />
+                      <img src={withBasePath(item.logo)} alt={item.logoAlt} loading="lazy" />
                     </div>
                     <div className="education-head-content">
                       <p className="meta">{item.period}</p>
