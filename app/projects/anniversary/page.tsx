@@ -16,12 +16,26 @@ export default function AnniversaryProjectPage() {
 
       <div className={styles.container}>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Project 02</p>
+          <p className={styles.eyebrow}>Project 04</p>
           <h1 className={styles.title}>项目介绍：凡岛 17 周年庆典活动策划与执行</h1>
           <p className={styles.lead}>
             在广州凡岛网络科技有限公司实习期间，我深度参与了公司 17 周年庆典活动的生命周期管理。该项目通过系列庆祝活动增强员工归属感并展现企业文化。
             作为核心执行成员，我负责从前期创意方案到现场多环节落地的全流程工作，在资源受限情况下保障活动 0 失误交付。
           </p>
+          <div className={styles.metrics}>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>执行环节</p>
+              <p className={styles.metricValue}>20+ 项</p>
+            </div>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>满意度</p>
+              <p className={styles.metricValue}>98%</p>
+            </div>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>交付结果</p>
+              <p className={styles.metricValue}>0 失误</p>
+            </div>
+          </div>
         </section>
 
         <section className={styles.section}>

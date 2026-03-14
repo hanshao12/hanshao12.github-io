@@ -16,7 +16,7 @@ export default function FixedAssetProjectPage() {
 
       <div className={styles.container}>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Project 01</p>
+          <p className={styles.eyebrow}>Project 03</p>
           <h1 className={styles.title}>项目介绍：固定资产管理数字化提质增效工程</h1>
           <p className={styles.lead}>
             在广州凡岛网络科技有限公司任职行政实习生期间，我主导并执行了公司固定资产的全面盘点与体系升级项目。该项目旨在解决公司在快速扩张过程中，

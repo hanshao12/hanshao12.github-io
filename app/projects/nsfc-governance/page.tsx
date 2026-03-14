@@ -16,12 +16,26 @@ export default function NsfcGovernanceProjectPage() {
 
       <div className={styles.container}>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Project 03</p>
+          <p className={styles.eyebrow}>Project 05</p>
           <h1 className={styles.title}>项目介绍：国家社科基金项目——数字化治理与风险规避研究</h1>
           <p className={styles.lead}>
             在参与国家社科基金项目《算法推荐的意识形态风险及治理路径研究》期间，我担任课题组核心成员，负责从前瞻性文献综述到实证调研的全流程工作。
             同时通过参加高水平学术会议吸收前沿观点，并转化为高质量学术与理论成果。
           </p>
+          <div className={styles.metrics}>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>论文/评论</p>
+              <p className={styles.metricValue}>3 篇</p>
+            </div>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>学术会议</p>
+              <p className={styles.metricValue}>3 场</p>
+            </div>
+            <div className={styles.metricCard}>
+              <p className={styles.metricLabel}>研究流程</p>
+              <p className={styles.metricValue}>全链路参与</p>
+            </div>
+          </div>
         </section>
 
         <section className={styles.section}>
@@ -39,19 +53,31 @@ export default function NsfcGovernanceProjectPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td>《多元共治：数字技术赋能城市社区智治...》</td>
+                  <td>
+                    <a className={styles.paperLink} href={withBasePath('/documents/papers/paper-1.pdf')} download>
+                      《多元共治：数字技术赋能城市社区智治...》
+                    </a>
+                  </td>
                   <td>《社会工作与管理》</td>
                   <td>学术期刊论文</td>
                   <td>基于广州旧南海县案例，构建社区智慧治理模型。</td>
                 </tr>
                 <tr>
-                  <td>《用好数字技术推进社区“智治”》</td>
+                  <td>
+                    <a className={styles.paperLink} href={withBasePath('/documents/papers/paper-2.pdf')} download>
+                      《用好数字技术推进社区“智治”》
+                    </a>
+                  </td>
                   <td>《深圳特区报》（理论版）</td>
                   <td>党报理论文章</td>
                   <td>阐述数字技术在基层治理中的应用逻辑。</td>
                 </tr>
                 <tr>
-                  <td>《以新质生产力赋能社会治理智慧化转型》</td>
+                  <td>
+                    <a className={styles.paperLink} href={withBasePath('/documents/papers/paper-3.pdf')} download>
+                      《以新质生产力赋能社会治理智慧化转型》
+                    </a>
+                  </td>
                   <td>《南方》杂志</td>
                   <td>主流媒体评论</td>
                   <td>探讨新质生产力与社会治理转型的深度融合。</td>
