@@ -68,7 +68,7 @@ export default function PersonalWebsitePage() {
               <figcaption className={styles.caption}>个人网站项目封面：用于首页项目卡片展示</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/home/hero-person.png')} alt="首页人物插画展示" loading="lazy" />
+              <img src={withBasePath('/images/home/hero-person.svg')} alt="首页人物插画展示" loading="lazy" />
               <figcaption className={styles.caption}>首页人物视觉：用于强化首屏识别度与整体气质</figcaption>
             </figure>
           </div>
