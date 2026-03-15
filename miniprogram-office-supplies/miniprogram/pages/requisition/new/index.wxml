@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">领用用途</view>
+    <input class="input" placeholder="如：项目组日常办公" value="{{purpose}}" bindinput="onPurposeInput" />
+  </view>
+
+  <view class="card">
+    <view class="section-title">选择物资</view>
+    <view wx:for="{{items}}" wx:key="_id" class="item-row">
+      <view class="row">
+        <view>
+          <view>{{item.name}}</view>
+          <view class="subtle">{{item.category}} · ¥{{item.unitPrice}}/{{item.unit}}</view>
+          <view class="subtle">可用库存 {{item.availableStock}}</view>
+        </view>
+        <view class="qty-area">
+          <button class="qty-btn" data-id="{{item._id}}" data-step="-1" bindtap="adjustQty">-</button>
+          <input class="qty-input" data-id="{{item._id}}" type="number" value="{{item.qty}}" bindinput="onQtyInput" />
+          <button class="qty-btn" data-id="{{item._id}}" data-step="1" bindtap="adjustQty">+</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <view class="section-title">预计总额</view>
+      <view class="title">¥{{totalAmount}}</view>
+    </view>
+    <view class="subtle">仅数量大于 0 的物资会进入申请单。</view>
+    <button class="btn-primary mt24" loading="{{loading}}" bindtap="createAndSubmit">提交申请</button>
+  </view>
+</view>

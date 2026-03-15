@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card row">
+    <view class="section-title">待出库单据</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="_id">
+    <view class="row">
+      <view class="title">{{item.no}}</view>
+      <view class="pill">{{item.status}}</view>
+    </view>
+    <view class="subtle mt16">申请人：{{item.requesterName}}</view>
+    <view class="subtle mt16">金额：¥{{item.totalAmount}}</view>
+    <button class="btn-primary mt24" data-id="{{item._id}}" bindtap="onPick">确认出库</button>
+  </view>
+
+  <view class="card" wx:if="{{!list.length}}">
+    <view class="subtle">暂无待出库单据</view>
+  </view>
+</view>

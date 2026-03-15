@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="card row">
+    <view class="section-title">运营概览</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card">
+    <view class="row"><text>库存总量</text><text>{{snapshot.totalOnHand}}</text></view>
+    <view class="row mt16"><text>低库存物资数</text><text>{{snapshot.lowStockCount}}</text></view>
+    <view class="row mt16"><text>近7天出库件数</text><text>{{snapshot.weeklyOutQty}}</text></view>
+    <view class="row mt16"><text>近7天出库金额</text><text>¥{{snapshot.weeklyOutAmount}}</text></view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">近7天 TOP 物资</view>
+    <view wx:for="{{snapshot.topItems}}" wx:key="itemId" class="row mt16">
+      <text>{{item.itemName}}</text>
+      <text>{{item.qty}}</text>
+    </view>
+    <view wx:if="{{!(snapshot.topItems || []).length}}" class="subtle">暂无数据</view>
+  </view>
+</view>

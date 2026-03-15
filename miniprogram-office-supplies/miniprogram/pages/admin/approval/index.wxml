@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card row">
+    <view class="section-title">待审批领用单</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="_id">
+    <view class="row">
+      <view class="title">{{item.no}}</view>
+      <view class="pill">¥{{item.totalAmount}}</view>
+    </view>
+    <view class="subtle mt16">申请人：{{item.requesterName}}（{{item.department}}）</view>
+    <view class="subtle mt16">用途：{{item.purpose || '-'}}</view>
+    <view class="row mt24">
+      <button class="btn-danger" size="mini" data-id="{{item._id}}" data-action="reject" bindtap="onDecide">驳回</button>
+      <button class="btn-primary" size="mini" data-id="{{item._id}}" data-action="approve" bindtap="onDecide">通过</button>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{!list.length}}">
+    <view class="subtle">当前没有待审批单据</view>
+  </view>
+</view>

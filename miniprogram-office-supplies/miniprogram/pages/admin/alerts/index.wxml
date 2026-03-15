@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card row">
+    <view class="section-title">低库存列表</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card" wx:for="{{items}}" wx:key="itemId">
+    <view class="row">
+      <view class="title">{{item.name}}</view>
+      <view class="pill">缺口 {{item.shortageQty}}</view>
+    </view>
+    <view class="subtle mt16">库存 {{item.onHand}} / 下限 {{item.minStock}}</view>
+  </view>
+
+  <view class="card" wx:if="{{!items.length}}">
+    <view class="subtle">暂无低库存项</view>
+  </view>
+
+  <button class="btn-primary" bindtap="generate">生成补货建议</button>
+</view>

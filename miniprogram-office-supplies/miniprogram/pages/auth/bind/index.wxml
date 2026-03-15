@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="card">
+    <view class="title">首次登录绑定</view>
+    <view class="subtle mt16">请输入工号与手机号后四位完成身份绑定。</view>
+
+    <view class="section-title mt24">工号</view>
+    <input class="input" placeholder="如 A1001" value="{{employeeCode}}" bindinput="onEmployeeCodeInput" />
+
+    <view class="section-title mt24">手机号后四位</view>
+    <input class="input" type="number" maxlength="4" placeholder="如 1111" value="{{mobileLast4}}" bindinput="onMobileInput" />
+
+    <button class="btn-primary mt24" loading="{{loading}}" bindtap="onBind">绑定并登录</button>
+  </view>
+</view>

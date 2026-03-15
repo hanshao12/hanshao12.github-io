@@ -1,0 +1,17 @@
+{
+  "description": "Office Supplies Requisition Mini Program",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true
+  },
+  "appid": "touristappid",
+  "projectname": "office-supplies-v1"
+}

@@ -1,0 +1,95 @@
+page {
+  background: #f4f7f9;
+  color: #111827;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(15, 23, 42, 0.08);
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.subtle {
+  color: #64748b;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill {
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 22rpx;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, #0f766e 0%, #0d9488 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16rpx;
+  min-height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 16rpx;
+  min-height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.btn-ghost {
+  background: #ecfeff;
+  color: #0f766e;
+  border: 2rpx solid #5eead4;
+  border-radius: 16rpx;
+  min-height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.input,
+.picker {
+  width: 100%;
+  background: #ffffff;
+  border: 2rpx solid #cbd5e1;
+  border-radius: 16rpx;
+  min-height: 88rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.mt16 {
+  margin-top: 16rpx;
+}
+
+.mt24 {
+  margin-top: 24rpx;
+}

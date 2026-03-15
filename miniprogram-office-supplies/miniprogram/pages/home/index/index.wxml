@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card">
+    <view class="row">
+      <view>
+        <view class="title">{{greeting}}</view>
+        <view class="subtle mt16">{{user.name || '未登录'}} · {{user.department || '未知部门'}}</view>
+      </view>
+      <view class="pill">{{user.role || 'GUEST'}}</view>
+    </view>
+    <button class="btn-primary mt24" bindtap="toNewRequisition">发起领用申请</button>
+  </view>
+
+  <view class="card">
+    <view class="section-title">常用办公用品</view>
+    <block wx:if="{{items.length}}">
+      <view wx:for="{{items}}" wx:key="_id" class="row mt16">
+        <view>
+          <view>{{item.name}}</view>
+          <view class="subtle">{{item.category}} · ¥{{item.unitPrice}}/{{item.unit}}</view>
+        </view>
+        <view class="pill">可用 {{item.availableStock}}</view>
+      </view>
+    </block>
+    <view wx:else class="subtle">暂无可领用物资</view>
+  </view>
+
+  <view class="card" wx:if="{{isAdmin}}">
+    <view class="section-title">低库存提醒</view>
+    <block wx:if="{{lowStock.length}}">
+      <view wx:for="{{lowStock}}" wx:key="itemId" class="row mt16">
+        <view>{{item.name}}</view>
+        <view class="subtle">库存 {{item.onHand}} / 下限 {{item.minStock}}</view>
+      </view>
+    </block>
+    <view wx:else class="subtle">当前无低库存项</view>
+  </view>
+</view>

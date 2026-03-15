@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view class="title">{{user.name || '未登录'}}</view>
+    <view class="subtle mt16">工号：{{user.employeeCode || '-'}}</view>
+    <view class="subtle mt16">部门：{{user.department || '-'}}</view>
+    <view class="subtle mt16">角色：{{user.role || 'GUEST'}}</view>
+    <button class="btn-primary mt24" bindtap="toMyRequisitions">我的申请</button>
+    <button class="btn-danger mt16" bindtap="logout">退出登录</button>
+  </view>
+
+  <view class="card" wx:if="{{isAdmin}}">
+    <view class="section-title">管理入口</view>
+    <navigator class="entry" url="/pages/admin/approval/index">审批中心</navigator>
+    <navigator class="entry" url="/pages/admin/pick/index">出库台</navigator>
+    <navigator class="entry" url="/pages/admin/items/index">物资管理</navigator>
+    <navigator class="entry" url="/pages/admin/alerts/index">库存预警</navigator>
+    <navigator class="entry" url="/pages/admin/replenishment/index">补货建议</navigator>
+    <navigator class="entry" url="/pages/admin/reports/index">报表</navigator>
+    <navigator class="entry" url="/pages/admin/config/index">系统配置</navigator>
+  </view>
+</view>

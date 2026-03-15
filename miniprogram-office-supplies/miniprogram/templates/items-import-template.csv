@@ -1,0 +1,4 @@
+code,name,category,unit,unitPrice,isControlled,minStock,maxStock,initialStock,status
+PEN001,中性笔,文具,支,2.5,false,100,1000,300,ACTIVE
+PAPER001,A4打印纸,纸品,包,24.0,false,20,200,60,ACTIVE
+MOUSE001,无线鼠标,外设,个,79.0,true,5,40,15,ACTIVE

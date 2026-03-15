@@ -19,25 +19,22 @@ export default function PersonalWebsitePage() {
           <p className={styles.eyebrow}>Project 02</p>
           <h1 className={styles.title}>项目介绍：个人网站设计与开发</h1>
           <p className={styles.lead}>
-            这是我围绕个人展示、经历梳理与项目表达搭建的作品集网站。项目目标不仅是完整承载学历背景、实习经历与核心能力，
-            也希望通过更统一的视觉语言与交互细节，呈现一个更有辨识度、更适合长期迭代的个人品牌主页。
-          </p>
-          <p className={styles.lead}>
-            注：本网站所使用到的插画由 <span className={styles.toolPill}>Nano Banana</span> 生成。
+            这个项目围绕“个人展示 + 项目沉淀 + 在线访问”展开。我从信息架构、首页排版、项目详情页、页面动效到响应式适配进行了完整搭建，
+            将个人经历、实习内容与代表项目整理为一个可以持续更新的个人网站。
           </p>
 
           <div className={styles.metrics}>
             <div className={styles.metricCard}>
-              <p className={styles.metricLabel}>核心板块</p>
-              <p className={styles.metricValue}>5 个内容模块</p>
+              <p className={styles.metricLabel}>网站结构</p>
+              <p className={styles.metricValue}>1 个首页 + 5 个项目页</p>
             </div>
             <div className={styles.metricCard}>
-              <p className={styles.metricLabel}>项目体系</p>
-              <p className={styles.metricValue}>5 个案例入口</p>
+              <p className={styles.metricLabel}>交互重点</p>
+              <p className={styles.metricValue}>锚点导航 + 悬停反馈</p>
             </div>
             <div className={styles.metricCard}>
-              <p className={styles.metricLabel}>迭代重点</p>
-              <p className={styles.metricValue}>UI + 交互双优化</p>
+              <p className={styles.metricLabel}>交付方式</p>
+              <p className={styles.metricValue}>静态导出可直接部署</p>
             </div>
           </div>
         </section>
@@ -45,35 +42,43 @@ export default function PersonalWebsitePage() {
         <section className={styles.section}>
           <h2>1. 项目目标</h2>
           <ul className={styles.list}>
-            <li>将个人经历、项目成果与核心能力以清晰有层次的方式统一呈现。</li>
-            <li>通过更精细的版式、留白和动效设计，提升整体网站质感与记忆点。</li>
-            <li>构建可持续扩展的项目详情页体系，方便后续继续补充案例与作品。</li>
+            <li>把教育背景、实习经历、项目成果整合成统一且清晰的线上展示界面。</li>
+            <li>强化首页首屏的辨识度，让访问者快速建立对个人方向与能力的印象。</li>
+            <li>用静态化部署方式降低维护成本，方便后续绑定个人域名持续更新。</li>
           </ul>
         </section>
 
         <section className={styles.section}>
-          <h2>2. 设计与结构优化</h2>
+          <h2>2. 设计与开发过程</h2>
           <ul className={styles.list}>
-            <li>重组首页内容顺序，将学历背景、实习经历、个人项目与核心能力按阅读逻辑重新排布。</li>
-            <li>围绕首屏标题、能力模块、项目展示与信息胶囊反复微调留白、字体层级与色彩关系。</li>
-            <li>将个人项目区重构为 Z 型视觉动线，让用户视线从标题、摘要自然过渡到按钮与下一项目。</li>
+            <li>先梳理内容优先级，重构首页顺序与锚点结构，让浏览路径更自然。</li>
+            <li>围绕 Apple 风格的留白、层次与排版节奏，对首页首屏进行了多轮微调。</li>
+            <li>
+              使用 <span className={styles.toolPill}>Nano Banana</span> 生成网站中的插画与部分视觉素材，提升页面统一性与记忆点。
+            </li>
+            <li>基于 Next.js 静态导出方案完成项目搭建，使其能够直接部署到 GitHub Pages、腾讯云 Nginx 或 COS 静态站点。</li>
           </ul>
         </section>
 
         <section className={styles.section}>
-          <h2>3. 开发与交互实现</h2>
-          <ul className={styles.list}>
-            <li>基于 Next.js 进行页面组织与路由管理，补充多个项目详情页入口与下载链接能力。</li>
-            <li>为首页主标题、卡片 Hover、文内胶囊等元素加入克制但有记忆点的微交互。</li>
-            <li>同步考虑桌面端与移动端适配，控制组件尺寸、间距与图片展示方式，保证浏览体验一致。</li>
-          </ul>
+          <h2>3. 页面展示</h2>
+          <div className={styles.galleryWide}>
+            <figure className={styles.galleryCard}>
+              <img src={withBasePath('/images/home/projects/project-05.png')} alt="个人网站项目封面图" loading="lazy" />
+              <figcaption className={styles.caption}>个人网站项目封面：用于首页项目卡片展示</figcaption>
+            </figure>
+            <figure className={styles.galleryCard}>
+              <img src={withBasePath('/images/home/hero-person.png')} alt="首页人物插画展示" loading="lazy" />
+              <figcaption className={styles.caption}>首页人物视觉：用于强化首屏识别度与整体气质</figcaption>
+            </figure>
+          </div>
         </section>
 
         <section className={styles.section}>
-          <h2>4. 项目成果</h2>
+          <h2>4. 项目价值</h2>
           <p>
-            通过这一轮个人网站开发，我完成了从内容梳理、结构搭建到视觉精修与交互优化的完整闭环，也逐步形成了适合长期维护的个人展示框架。
-            这个网站不仅是我的线上名片，也成为后续持续沉淀项目成果与表达能力的重要载体。
+            这个网站不仅是个人作品集，也是我把内容组织、视觉表达、前端实现与部署落地串联起来的一次完整实践。
+            它体现了我在“需求整理 → 页面设计 → 细节优化 → 上线发布”这一链路上的独立交付能力。
           </p>
         </section>
       </div>

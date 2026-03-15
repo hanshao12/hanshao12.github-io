@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="card">
+    <view class="row">
+      <view class="section-title">站内消息</view>
+      <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+    </view>
+  </view>
+
+  <view class="card" wx:for="{{messages}}" wx:key="_id" bindtap="onRead" data-id="{{item._id}}">
+    <view class="row">
+      <view class="title">{{item.title}}</view>
+      <view class="pill" wx:if="{{!item.readAt}}">未读</view>
+      <view class="subtle" wx:else>已读</view>
+    </view>
+    <view class="subtle mt16">{{item.content}}</view>
+    <view class="subtle mt16">{{item.createdAtText}}</view>
+  </view>
+
+  <view class="card" wx:if="{{!messages.length}}">
+    <view class="subtle">暂无消息</view>
+  </view>
+</view>

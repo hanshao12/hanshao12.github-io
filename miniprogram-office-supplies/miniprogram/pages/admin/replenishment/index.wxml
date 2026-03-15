@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card row">
+    <view class="section-title">补货建议清单</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="_id">
+    <view class="row">
+      <view class="title">{{item.itemName}}</view>
+      <view class="pill">建议补 {{item.shortageQty}}</view>
+    </view>
+    <view class="subtle mt16">状态：{{item.status}}</view>
+    <view class="subtle mt16">来源：{{item.source || '-'}}</view>
+    <button wx:if="{{item.status === 'OPEN'}}" class="btn-primary mt24" data-id="{{item._id}}" bindtap="markDone">标记已处理</button>
+  </view>
+
+  <view class="card" wx:if="{{!list.length}}">
+    <view class="subtle">暂无补货建议</view>
+  </view>
+</view>

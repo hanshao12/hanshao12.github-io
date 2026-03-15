@@ -1,0 +1,4 @@
+{
+  "envId": "replace-with-your-env-id",
+  "functionRoot": "./cloudfunctions"
+}

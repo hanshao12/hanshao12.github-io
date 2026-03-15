@@ -1,0 +1,4 @@
+employeeCode,name,department,mobile,role,status
+A1001,张三,行政部,13800001111,ADMIN,ACTIVE
+A1002,李四,研发部,13800002222,EMPLOYEE,ACTIVE
+A1003,王五,市场部,13800003333,APPROVER,ACTIVE

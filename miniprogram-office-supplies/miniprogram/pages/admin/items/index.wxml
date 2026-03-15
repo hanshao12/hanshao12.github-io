@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">新增/更新物资</view>
+    <input class="input mt16" placeholder="物资编码（必填）" value="{{form.code}}" data-field="code" bindinput="onFormInput" />
+    <input class="input mt16" placeholder="名称（必填）" value="{{form.name}}" data-field="name" bindinput="onFormInput" />
+    <input class="input mt16" placeholder="品类（必填）" value="{{form.category}}" data-field="category" bindinput="onFormInput" />
+    <input class="input mt16" placeholder="单位（如 支/包/个）" value="{{form.unit}}" data-field="unit" bindinput="onFormInput" />
+    <input class="input mt16" type="digit" placeholder="单价" value="{{form.unitPrice}}" data-field="unitPrice" bindinput="onFormInput" />
+    <input class="input mt16" type="number" placeholder="初始库存" value="{{form.initialStock}}" data-field="initialStock" bindinput="onFormInput" />
+    <label class="row mt16">
+      <text>受控品类</text>
+      <switch checked="{{form.isControlled}}" bindchange="onControlledChange" />
+    </label>
+    <button class="btn-primary mt24" bindtap="onSave">保存</button>
+  </view>
+
+  <view class="card row">
+    <view class="section-title">物资列表</view>
+    <button class="btn-ghost" size="mini" bindtap="loadData">刷新</button>
+  </view>
+
+  <view class="card" wx:for="{{items}}" wx:key="_id">
+    <view class="row">
+      <view>
+        <view class="title">{{item.name}}</view>
+        <view class="subtle mt16">{{item.code}} · {{item.category}}</view>
+      </view>
+      <view class="pill">库存 {{item.onHandStock}}</view>
+    </view>
+    <view class="subtle mt16">可用 {{item.availableStock}} · 单价 ¥{{item.unitPrice}}/{{item.unit}}</view>
+  </view>
+</view>
