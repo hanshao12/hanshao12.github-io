@@ -1,5 +1,6 @@
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
-const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true' && Boolean(repoName);
+const hasCustomDomain = process.env.CUSTOM_DOMAIN === 'true';
+const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true' && Boolean(repoName) && !hasCustomDomain;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
