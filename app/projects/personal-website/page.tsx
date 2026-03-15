@@ -64,7 +64,7 @@ export default function PersonalWebsitePage() {
           <h2>3. 页面展示</h2>
           <div className={styles.galleryWide}>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/home/projects/project-05.png')} alt="个人网站项目封面图" loading="lazy" />
+              <img src={withBasePath('/images/home/projects/project-05.jpg')} alt="个人网站项目封面图" loading="lazy" />
               <figcaption className={styles.caption}>个人网站项目封面：用于首页项目卡片展示</figcaption>
             </figure>
             <figure className={styles.galleryCard}>

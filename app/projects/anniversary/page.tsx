@@ -76,7 +76,7 @@ export default function AnniversaryProjectPage() {
           <h2>活动执行图集</h2>
           <div className={styles.galleryWide}>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/projects/p2/1.png')} alt="周年庆抽奖转盘设计图" loading="lazy" />
+              <img src={withBasePath('/images/projects/p2/1.jpg')} alt="周年庆抽奖转盘设计图" loading="lazy" />
               <figcaption className={styles.caption}>周年庆抽奖转盘视觉设计稿</figcaption>
             </figure>
             <figure className={styles.galleryCard}>

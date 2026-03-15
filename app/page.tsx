@@ -88,7 +88,7 @@ const projectCards: ProjectCard[] = [
       '围绕企业内部办公用品与固定资产申领场景，使用 Vibe Coding 快速完成微信小程序原型搭建、交互打磨与演示链路验证。',
     tags: ['微信小程序', 'Vibe Coding', 'AI协同'],
     href: '/projects/vibe-coding-mini-program',
-    cover: '/images/home/projects/project-04.png',
+    cover: '/images/home/projects/project-04.jpg',
     coverAlt: 'Vibe Coding 制作小程序项目封面'
   },
   {
@@ -97,7 +97,7 @@ const projectCards: ProjectCard[] = [
       '围绕个人展示与项目呈现需求，完成作品集网站的信息架构梳理、视觉排版、交互动效与项目详情页搭建，并持续进行细节优化。',
     tags: ['个人品牌', '交互设计', '响应式'],
     href: '/projects/personal-website',
-    cover: '/images/home/projects/project-05.png',
+    cover: '/images/home/projects/project-05.jpg',
     coverAlt: '个人网站设计与开发项目封面'
   },
   {
@@ -106,7 +106,7 @@ const projectCards: ProjectCard[] = [
       '围绕“盘点效率 + 账实一致”双目标，完成资产台账与现场资产数字化核对闭环，实现盘点周期与准确率同步提升。',
     tags: ['资产管理', '数据治理', '流程优化'],
     href: '/projects/fixed-asset',
-    cover: '/images/home/projects/project-01.png',
+    cover: '/images/home/projects/project-01.jpg',
     coverAlt: '固定资产智能盘点项目封面'
   },
   {
@@ -115,7 +115,7 @@ const projectCards: ProjectCard[] = [
       '作为核心执行成员参与公司17周年庆，从策划、采购、视觉设计到现场统筹与复盘，保障多环节协同与0失误落地。',
     tags: ['活动运营', '资源协调', '细节执行'],
     href: '/projects/anniversary',
-    cover: '/images/home/projects/project-02.png',
+    cover: '/images/home/projects/project-02.jpg',
     coverAlt: '凡岛周年庆项目封面'
   },
   {
@@ -124,7 +124,7 @@ const projectCards: ProjectCard[] = [
       '参与算法推荐治理与风险规避相关课题，覆盖文献综述、深度访谈、Nvivo编码分析及学术成果输出全流程。',
     tags: ['学术研究', '政策分析', 'Nvivo'],
     href: '/projects/nsfc-governance',
-    cover: '/images/home/projects/project-03.png',
+    cover: '/images/home/projects/project-03.jpg',
     coverAlt: '国家社科基金项目封面'
   }
 ];
