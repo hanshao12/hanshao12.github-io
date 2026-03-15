@@ -1,0 +1,34 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6F9FE"/>
+  <g opacity="0.85">
+    <circle cx="1032" cy="109" r="160" fill="url(#paint0_radial)"/>
+    <circle cx="140" cy="557" r="180" fill="url(#paint1_radial)"/>
+  </g>
+  <rect x="52" y="48" width="1096" height="534" rx="34" fill="white"/>
+  <rect x="52.75" y="48.75" width="1094.5" height="532.5" rx="33.25" stroke="#E3ECF8" stroke-width="1.5"/>
+  <rect x="92" y="88" width="184" height="54" rx="27" fill="#EEF5FF"/>
+  <text x="128" y="123" fill="#1677FF" font-size="28" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" letter-spacing="2">HANYAOJUN</text>
+  <rect x="894" y="82" width="210" height="210" rx="44" fill="url(#paint2_linear)"/>
+  <rect x="907" y="95" width="184" height="184" rx="36" stroke="rgba(255,255,255,0.34)" stroke-width="2"/>
+  <path d="M954 131H977.6V168.8H1021.4V131H1045V234H1021.4V189.8H977.6V234H954V131Z" fill="white"/>
+  <text x="92" y="240" fill="#111827" font-size="78" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">韩曜骏</text>
+  <text x="92" y="307" fill="#4B5B73" font-size="34" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" font-weight="500">行政管理与组织运营优化</text>
+  <text x="92" y="381" fill="#22324A" font-size="28" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">个人网站 · 教育背景 · 实习经历 · 项目作品集</text>
+  <text x="92" y="425" fill="#22324A" font-size="28" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif">Administrative Management · Operations · Portfolio</text>
+  <rect x="92" y="476" width="360" height="58" rx="29" fill="#F3F7FD"/>
+  <text x="124" y="514" fill="#0F4F86" font-size="28" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" font-weight="600">hanyaojun.com</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1032 109) rotate(90) scale(160)">
+      <stop stop-color="#DDEBFF"/>
+      <stop offset="1" stop-color="#DDEBFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(140 557) rotate(90) scale(180)">
+      <stop stop-color="#EAF2FF"/>
+      <stop offset="1" stop-color="#EAF2FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint2_linear" x1="910" y1="82" x2="1089" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1677FF"/>
+      <stop offset="1" stop-color="#0F4F86"/>
+    </linearGradient>
+  </defs>
+</svg>
