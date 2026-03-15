@@ -90,15 +90,15 @@ export default function FixedAssetProjectPage() {
           <h2>项目现场与成果图</h2>
           <div className={styles.gallery}>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/projects/p1/8.jpg')} alt="固定资产盘点现场图1" loading="lazy" />
+              <img src={withBasePath('/images/projects/p1/8.jpg')} alt="固定资产盘点现场图1" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>资产仓储区域盘点场景</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/projects/p1/9.jpg')} alt="固定资产盘点现场图2" loading="lazy" />
+              <img src={withBasePath('/images/projects/p1/9.jpg')} alt="固定资产盘点现场图2" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>办公物资与台账核对场景</figcaption>
             </figure>
             <figure className={styles.galleryCard}>
-              <img src={withBasePath('/images/projects/p1/10.jpg')} alt="固定资产盘点现场图3" loading="lazy" />
+              <img src={withBasePath('/images/projects/p1/10.jpg')} alt="固定资产盘点现场图3" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>资产标签化与编号管理记录</figcaption>
             </figure>
           </div>

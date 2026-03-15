@@ -92,11 +92,11 @@ export default function VibeCodingMiniProgramPage() {
 
           <div className={styles.evolutionOldGrid}>
             <figure className={`${styles.galleryPlainCard} ${styles.evolutionOldCard}`}>
-              <img src={withBasePath('/images/projects/p4/old-1.jpg')} alt="AI 最初生成的小程序旧版界面 1" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/old-1.jpg')} alt="AI 最初生成的小程序旧版界面 1" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>AI 初版界面 01：用于快速验证首页视觉与基础入口</figcaption>
             </figure>
             <figure className={`${styles.galleryPlainCard} ${styles.evolutionOldCard}`}>
-              <img src={withBasePath('/images/projects/p4/old-2.jpg')} alt="AI 最初生成的小程序旧版界面 2" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/old-2.jpg')} alt="AI 最初生成的小程序旧版界面 2" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>AI 初版界面 02：用于验证组件语言与信息展示方式</figcaption>
             </figure>
           </div>
@@ -109,19 +109,19 @@ export default function VibeCodingMiniProgramPage() {
 
           <div className={styles.galleryPlain}>
             <figure className={styles.galleryPlainCard}>
-              <img src={withBasePath('/images/projects/p4/login.jpg')} alt="办公领用助手小程序登录页" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/login.jpg')} alt="办公领用助手小程序登录页" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>登录页：进入小程序后的身份验证与体验入口</figcaption>
             </figure>
             <figure className={styles.galleryPlainCard}>
-              <img src={withBasePath('/images/projects/p4/catalog.jpg')} alt="办公领用助手小程序目录页" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/catalog.jpg')} alt="办公领用助手小程序目录页" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>目录页：浏览办公用品与固定资产分类目录</figcaption>
             </figure>
             <figure className={styles.galleryPlainCard}>
-              <img src={withBasePath('/images/projects/p4/records.jpg')} alt="办公领用助手小程序申领记录页" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/records.jpg')} alt="办公领用助手小程序申领记录页" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>申领记录页：追踪申请进度、历史记录与状态反馈</figcaption>
             </figure>
             <figure className={styles.galleryPlainCard}>
-              <img src={withBasePath('/images/projects/p4/profile.jpg')} alt="办公领用助手小程序我的页" loading="lazy" />
+              <img src={withBasePath('/images/projects/p4/profile.jpg')} alt="办公领用助手小程序我的页" loading="eager" fetchPriority="high" />
               <figcaption className={styles.caption}>我的页：集中查看个人信息、反馈入口与常用功能</figcaption>
             </figure>
           </div>
