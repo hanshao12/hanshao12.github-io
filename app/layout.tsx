@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './intro.css';
 export const metadata: Metadata = {
  metadataBase: new URL('https://hanyaojun.com'),
  title: {default:'韩曜骏 · 个人作品集',template:'%s｜韩曜骏'},

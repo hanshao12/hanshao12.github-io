@@ -1,6 +1,6 @@
 # 韩曜骏 · 个人作品集
 
-以行政中台系统、工位管理系统、餐费分析和序程项目管理为主题的个人作品集。首页以三层玻璃文件夹承载四张可点击作品卡片。
+以行政中台系统、工位管理系统、餐费分析和序程项目管理为主题的个人作品集。个人介绍为首页，作品页 /work/ 以三层玻璃文件夹承载四张卡片，并在页内打开项目详情。
 
 ## 开发与发布
 
@@ -15,7 +15,7 @@ npm run build
 ## 内容入口
 
 - `app/projects-data.ts`：作品文案、链接、状态和技术信息。
-- `app/page.tsx` / `app/home.css`：单屏文件夹首页、扇形展开、触屏切换与关于弹窗。
+- `app/page.tsx` / `app/intro.css`：个人介绍首页与全局导航。`app/work/`：文件夹作品页。`app/components/ProjectOverlay.tsx`：沉浸式页内项目详情。
 - `app/components/ProductPreview.tsx`：以代码绘制的产品界面与分层文件夹示意。
 - `app/projects/[slug]/page.tsx`：四个静态项目详情页。
 - `app/project-stories.ts`：基于项目资料整理的案例正文、流程、模块与设计取舍。`app/projects/[slug]/case.css`：详情页布局。
