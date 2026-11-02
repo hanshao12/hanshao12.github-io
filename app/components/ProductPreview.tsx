@@ -6,7 +6,7 @@ export default function ProductPreview({ project, large = false }: { project: Pr
     {!large ? <div className="folder-back" aria-hidden="true"/> : null}
     <div className="product-window" aria-label={`${project.name}界面概念示意`}>
       <div className="window-top"><span className="window-dots"><i/><i/><i/></span><span>{project.name}</span><span>↗</span></div>
-      <div className="window-body"><aside className="mock-sidebar"><b className="mock-logo">{project.number === '04' ? '序' : '悦'}</b><span className="selected"/><span/><span/><span/><span/><i/></aside>
+      <div className="window-body"><aside className="mock-sidebar"><b className="mock-logo">{{'01':'行','02':'位','03':'析','04':'序'}[project.number]}</b><span className="selected"/><span/><span/><span/><span/><i/></aside>
       <div className="mock-content">
         <div className="mock-heading"><div><small>{project.en}</small><h4>{project.number === '01' ? '工作，从容开始' : project.number === '02' ? '空间一目了然' : project.number === '03' ? '餐费分析概览' : '每一步，都有序'}</h4></div><span className="mock-avatar">H</span></div>
         {project.number === '01' ? <><div className="mock-banner"><span>行政服务 · 触手可及</span><b>让日常，更简单。</b><div className="banner-ring"/></div><div className="service-grid">{['报修申请','活动报名','员工福利','本周菜单','行政提醒','抽奖投票'].map((v,i)=><div key={v}><span>{['⌘','✳','◇','☷','◷','✧'][i]}</span>{v}</div>)}</div><div className="mock-bottom"><span>服务动态</span><i/><i/></div></> : null}

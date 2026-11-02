@@ -1,21 +1,43 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { projects } from './projects-data';
-import ProductPreview from './components/ProductPreview';
+import './home.css';
 
-export default function Home() {
-  const [filter,setFilter] = useState('全部作品');
-  const [menu,setMenu] = useState(false);
-  useEffect(()=>{const nodes=document.querySelectorAll('.reveal'); const o=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}}),{threshold:.08});nodes.forEach(n=>o.observe(n));return()=>o.disconnect()},[filter]);
-  const shown = projects.filter(p=>filter==='全部作品'||(filter==='企业应用' ? ['01','02'].includes(p.number):filter==='数据分析'?p.number==='03':p.number==='04'));
-  return <main>
-    <a className="skip-link" href="#work">跳到作品</a>
-    <header className="site-header"><a className="brand" href="#"><span className="brand-symbol">h<span>↗</span></span><span>韩曜骏<small>HANYAOJUN</small></span></a><nav aria-label="主导航" className={menu?'open':''}><a href="#work" onClick={()=>setMenu(false)}>精选作品</a><a href="#about" onClick={()=>setMenu(false)}>关于我</a><a href="https://github.com/hanshao12" target="_blank" rel="noreferrer">GitHub ↗</a></nav><a className="header-contact" href="#contact">聊聊合作 <span>↗</span></a><button className="menu-button" aria-label="切换导航" aria-expanded={menu} onClick={()=>setMenu(!menu)}>{menu?'关闭':'菜单'}</button></header>
-    <section className="hero"><div className="hero-glow"/><div className="hero-content"><div className="eyebrow"><i/> 从真实问题出发 · 用产品回应</div><h1>把日常的复杂，<br/>变成<span className="gradient-text">好用的产品。</span></h1><p className="hero-description">你好，我是韩曜骏。<br className="mobile-break"/>关注企业服务、数字化工具与产品体验，<br className="desktop-break"/>用 AI 协同开发，把工作中的想法变成可使用的应用。</p><div className="hero-actions"><a className="button primary" href="#work">探索我的作品 <span>↘</span></a><a className="text-link" href="#about">了解我的做事方式 <span>→</span></a></div><div className="hero-meta"><span>业务理解</span><i/><span>产品设计</span><i/><span>开发落地</span><span className="meta-line"/></div></div><div className="hero-art" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="art-center"><span>从想法</span><b>到产品</b><small>IDEA → PRODUCT</small></div><div className="floating-tag tag-one"><i/> 理解真实需求</div><div className="floating-tag tag-two"><span>⌘</span> 连接人与工具</div><div className="floating-tag tag-three">把想法落地 <span>↗</span></div><div className="art-cross cross-one">+</div><div className="art-cross cross-two">+</div></div><div className="hero-footer"><span>PERSONAL PORTFOLIO / 2026</span><a href="#work">向下探索 <span>↓</span></a></div></section>
-    <section className="work-section section-shell" id="work"><div className="section-heading reveal"><div><span className="section-kicker">01 / SELECTED WORK</span><h2>从场景出发，<br/><span>让作品说话。</span></h2></div><p>四个作品，四种问题的解法。<br/>在服务、空间、数据与协作之间，<br/>探索更清晰、更顺手的工作方式。</p></div><div className="work-toolbar"><div className="filters" role="group" aria-label="筛选作品">{['全部作品','企业应用','数据分析','协作工具'].map(f=><button key={f} aria-pressed={filter===f} className={filter===f?'active':''} onClick={()=>setFilter(f)}>{f}{f==='全部作品'?<span>04</span>:null}</button>)}</div><span className="work-count">{String(shown.length).padStart(2,'0')} PROJECTS</span></div><div className="projects-grid">{shown.map(p=><article className={`project-card reveal ${p.color}`} key={p.slug}><Link className="project-image-link" href={`/projects/${p.slug}/`} tabIndex={-1} aria-hidden="true"><ProductPreview project={p}/><span className="project-open">↗</span></Link><div className="project-copy"><div className="project-overline"><span>{p.category}</span><span>/{p.number}</span></div><Link className="project-title" href={`/projects/${p.slug}/`}><h3>{p.name}</h3><span>↗</span></Link><p>{p.description}</p><div className="project-tags">{p.tags.map(t=><span key={t}>{t}</span>)}</div></div></article>)}</div></section>
-    <section className="about-section section-shell" id="about"><div className="about-intro reveal"><span className="section-kicker">02 / THE WAY I BUILD</span><h2>懂业务，<br/>也把想法<span className="gradient-text">做出来。</span></h2><p>我的兴趣在业务与技术的交汇处。<br/>从日常工作中的具体问题出发，梳理需求、设计流程，再借助 AI 与开发工具构建应用，持续打磨使用体验。</p><a className="text-link" href="https://github.com/hanshao12" target="_blank" rel="noreferrer">在 GitHub 看更多探索 <span>↗</span></a></div><div className="approach-list">{[{n:'01',title:'先理解问题',en:'UNDERSTAND',text:'走进真实使用场景，厘清谁在使用、卡在哪里、什么值得被改善。'},{n:'02',title:'把复杂理清',en:'DESIGN',text:'从信息结构到操作流程，让功能有秩序，让界面更容易理解。'},{n:'03',title:'做出来，再打磨',en:'BUILD & ITERATE',text:'用 AI 协同开发连接想法与实现，在实际使用中发现问题、持续迭代。'}].map(a=><div className="approach-item reveal" key={a.n}><span>{a.n}</span><div><small>{a.en}</small><h3>{a.title}</h3><p>{a.text}</p></div><span>↗</span></div>)}</div></section>
-    <section className="contact-section section-shell" id="contact"><div className="contact-panel reveal"><span className="section-kicker">03 / LET’S CONNECT</span><h2>下一个好用的产品，<br/>从一次<span>交流</span>开始。</h2><p>关于产品、效率工具，或一个值得实现的想法，欢迎聊聊。</p><a className="button primary" href="mailto:hanyaojun0704@163.com">发封邮件给我 <span>↗</span></a><a className="email-link" href="mailto:hanyaojun0704@163.com">hanyaojun0704@163.com</a><span className="contact-star" aria-hidden="true">✳</span></div></section>
-    <footer className="site-footer"><a className="footer-name" href="#">韩曜骏 <span>HANYAOJUN</span></a><span>让想法落地，让工作更顺手。</span><div><span>© {new Date().getFullYear()}</span><a href="#">回到顶部 ↑</a></div></footer>
-  </main>;
+function Cover({number}:{number:string}) {
+ if(number==='01') return <div className="art-cover art-admin"><span className="cover-eyebrow">WORKPLACE, CONNECTED.</span><strong>Work,<br/>made simple<span>✳</span></strong><div className="admin-tiles"><i>⌘</i><i>◈</i><i>↗</i></div><span className="cover-bottom">ONE PLACE. EVERYDAY SERVICES.</span></div>;
+ if(number==='02') return <div className="art-cover art-space"><span className="cover-eyebrow">A PLACE FOR EVERYONE.</span><strong>让空间<br/>各就其位。</strong><div className="cover-floor">{Array.from({length:12},(_,i)=><i key={i} className={i%4===0?'empty':''}/>)}</div><span className="space-dot"/></div>;
+ if(number==='03') return <div className="art-cover art-data"><span className="cover-eyebrow">FIND THE SIGNAL.</span><strong>Data,<br/>made clear.</strong><div className="data-donut"/><svg viewBox="0 0 220 80" aria-hidden="true"><path d="M0 70C20 70 25 35 50 45S80 60 100 30S130 50 155 20S195 35 220 5" fill="none" stroke="#e08b5e" strokeWidth="3"/></svg><span className="cover-bottom">FROM NUMBERS TO UNDERSTANDING.</span></div>;
+ return <div className="art-cover art-flow"><span className="cover-eyebrow">FROM PLAN TO PROGRESS.</span><strong>序程<span>↗</span></strong><div className="flow-diagram"><i/><b/><i/><b/><i/></div><span className="flow-word">Make room<br/>for progress.</span></div>;
+}
+
+export default function Home(){
+ const [opened,setOpened]=useState(false);
+ const [hovered,setHovered]=useState(false);
+ const expanded=opened||hovered;
+ const [about,setAbout]=useState(false);
+ const dialog=useRef<HTMLDialogElement>(null);
+ const folder=useRef<HTMLDivElement>(null);
+ useEffect(()=>{if(about)dialog.current?.showModal();else dialog.current?.close()},[about]);
+ return <main className="portfolio-home">
+  <a className="skip-link" href="#portfolio-folder">跳到作品</a>
+  <header className="portfolio-nav"><Link href="/" className="portfolio-brand" aria-label="韩曜骏个人作品集">hyj<span>·</span></Link><nav aria-label="主导航"><button className="current" onClick={()=>{setOpened(true);folder.current?.scrollIntoView({behavior:'smooth',block:'center'});folder.current?.focus()}}>作品<span>04</span></button><button onClick={()=>setAbout(true)}>关于</button><a href="mailto:hanyaojun0704@163.com">联系 ↗</a></nav><span className="nav-note">DESIGNED TO MAKE THINGS BETTER.</span></header>
+  <section className="portfolio-canvas" aria-labelledby="portfolio-title">
+   <div className="canvas-intro"><span className="intro-dot"/><span>韩曜骏 · 数字产品与效率工具</span></div>
+   <h1 id="portfolio-title" className="welcome-script" aria-label="欢迎查看我的作品集">Welcome.</h1>
+   <div ref={folder} id="portfolio-folder" className={`portfolio-folder ${expanded?'is-open':''}`} tabIndex={-1} onPointerEnter={e=>{if(e.pointerType==='mouse')setHovered(true)}} onPointerLeave={()=>setHovered(false)} onKeyDown={e=>{if(e.key==='Escape'){setOpened(false);setHovered(false);(document.activeElement as HTMLElement)?.blur()}}}>
+    <div className="folder-ground"/>
+    <div className="folder-assembly">
+     <div className="glass-folder-back" aria-hidden="true"><span/></div>
+     <div className="folder-cards" id="folder-cards">{projects.map(p=><Link href={`/projects/${p.slug}/`} key={p.slug} className={`portfolio-piece piece-${p.number}`} aria-label={`查看${p.name}项目详情`}><div className="piece-surface"><Cover number={p.number}/><div className="piece-caption"><span><small>PROJECT / {p.number}</small><b>{p.name}</b></span><span className="piece-arrow">↗</span></div></div></Link>)}</div>
+     <button className="glass-folder-front" aria-label={expanded?'收起作品文件夹':'展开作品文件夹'} aria-expanded={expanded} aria-controls="folder-cards" onClick={()=>{setOpened(!expanded);setHovered(false)}}>
+      <span className="folder-shine"/><span className="folder-sticker sticker-asterisk" aria-hidden="true">✳</span><span className="folder-sticker sticker-note" aria-hidden="true">made<br/>with care.</span><span className="folder-signature"><span>韩曜骏</span><small>SELECTED WORKS / 2026</small></span><span className="folder-toggle-arrow" aria-hidden="true">↗</span>
+     </button>
+    </div>
+   </div>
+   <div className="canvas-caption"><span className="caption-line"/><p>一些想法，一些实践。<span>打开文件夹，看看我的作品。</span></p><span className="caption-line"/></div>
+  </section>
+  <footer className="portfolio-footer"><span>© 2026 HANYAOJUN</span><span>从真实问题出发。</span><a href="https://github.com/hanshao12" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
+  <dialog ref={dialog} className="about-dialog" onCancel={()=>setAbout(false)} onClose={()=>setAbout(false)} onClick={e=>{if(e.target===e.currentTarget)setAbout(false)}}><div className="about-dialog-inner"><button className="dialog-close" aria-label="关闭关于" onClick={()=>setAbout(false)}>×</button><span className="section-kicker">HELLO, I’M HANYAOJUN.</span><h2>你好，我是韩曜骏。</h2><p>关注业务与技术的交汇处，喜欢把日常工作中的具体问题，整理为清晰的产品和工具。</p><p>从需求梳理、流程设计到 AI 协同开发，围绕行政服务、空间管理、数据分析与项目协作持续实践。</p><a href="mailto:hanyaojun0704@163.com">hanyaojun0704@163.com <span>↗</span></a></div></dialog>
+ </main>
 }
